@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy birthday</title>
+    <link rel="stylesheet" href="happy/s.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+
+    <audio id="myAudio" loop>
+      <source src="music/nhac.mp3" type="audio/mp3" />
+    </audio>
+
+    <script src="happy/s.js"></script>
+
+    <script>
+      window.addEventListener('click', () => {
+        const audio = document.getElementById("myAudio");
+        audio.play().catch(err => {
+          console.warn("Không thể phát nhạc:", err);
+        });
+      }, { once: true });
+
+    setTimeout(() => {
+        window.location.href = "index.html";
+      }, 5025);
+    </script>
+  </body>
+</html>
